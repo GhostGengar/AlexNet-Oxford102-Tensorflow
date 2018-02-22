@@ -1,1 +1,3 @@
-# AlexNet_Oxford102_Tensorflow
+# Finetuning AlexNet for Oxford-102 Dataset
+
+I am updating this file with more information.
