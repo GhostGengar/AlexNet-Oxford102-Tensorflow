@@ -3,10 +3,12 @@
 ## Disclaimer
 This is a work in progress, I am not responsible for any false information provided by the model.
 
-## Cloning the project
+## Usage
+### For Training
+#### Cloning the project
 To clone the project, use `git clone https://github.com/GhostGengar/AlexNet-Oxford102-Tensorflow.git`
 
-## The dataset
+#### The dataset
 Download the dataset from [here](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
 
 You will need three files:
@@ -16,10 +18,11 @@ You will need three files:
 
 *Please download the three required files and put them inside the `AlexNet` folder if you want to train using the `.py` file.*
 
-## Start training
+#### Start training
 Run `python train.py` inside the AlexNet folder to start training the network.
 
-## Start testing
+### For Testing
+#### Pretrained Weights
 This Tensorflow implementation comes with pretrained weights for Oxford-102, to download the pretrained weights:
 * [The `.data` file](https://drive.google.com/file/d/1cibsejSXefO8rb-tZAPimULkjXkKzkQI)
 * [The `.index` file](https://drive.google.com/file/d/1Bjligj4trKPIL1YV9naorEy7S1PD9wzO)
@@ -29,7 +32,8 @@ This Tensorflow implementation comes with pretrained weights for Oxford-102, to 
 
 Pick an image of your choice and put it inside the `images` folder, rename it to `flower.jpg`.
 
-To start training, run `python flower_test.py`
+#### Start Testing
+To start testing, run `python flower_test.py`
 
 ## Requirements
 * numpy
@@ -39,3 +43,7 @@ To start training, run `python flower_test.py`
 
 ## Explaination
 * Full code description is available inside the `Oxford_102_AlexNet.ipynb` file.
+
+## Deployment and Variation
+* VGG16 (updating...)
+* iOS Deployment (updating...)
