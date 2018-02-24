@@ -1,7 +1,7 @@
 #############################################
-# Tien Dinh                 				#
-# Friendswood, TX 2/24/2018 				#
-# For full documentation, 					#
+# Tien Dinh                 		    #
+# Friendswood, TX 2/24/2018 	            #
+# For full documentation, 		    #
 # please refer to the Jupyter Notebook file #
 #############################################
 
