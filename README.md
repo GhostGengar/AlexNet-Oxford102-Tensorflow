@@ -19,7 +19,7 @@ You will need three files:
 You will also need AlexNet pretrained weights:
 * [Download from here](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)
 
-*Please download the three required files and put them inside the `AlexNet` folder if you want to train using the `.py` file.*
+*Please download the four required files and put them inside the `AlexNet` folder if you want to train using the `.py` file.*
 
 #### Start training
 Run `python train.py` inside the AlexNet folder to start training the network.
