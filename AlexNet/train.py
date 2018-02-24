@@ -50,22 +50,22 @@ def main():
 	with tf.name_scope('network_output'):
     	y_pred = model.y_pred
 
-    all_vars = tf.trainable_variables()
+	all_vars = tf.trainable_variables()
 	conv_vars = [all_vars[0], all_vars[2], all_vars[4], all_vars[6], all_vars[8], all_vars[10], all_vars[12]]
 	bias_vars = [all_vars[1], all_vars[3], all_vars[5], all_vars[7], all_vars[9], all_vars[11], all_vars[13]]
 	last_weights = [all_vars[14]]
 	last_bias = [all_vars[15]]
 
 	with tf.name_scope('cross_entropy'):
-    	cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_true,logits=y_pred))
-    tf.summary.scalar('cross_entropy', cross_entropy)
+    		cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_true,logits=y_pred))
+    	tf.summary.scalar('cross_entropy', cross_entropy)
 
-    with tf.name_scope('train'):
-    	gradients = tf.gradients(cross_entropy, conv_vars + bias_vars + last_weights + last_bias)
-    	conv_vars_gradients = gradients[:len(conv_vars)]
-    	bias_vars_gradients = gradients[len(conv_vars):len(conv_vars) + len(bias_vars)]
-    	last_weights_gradients = gradients[len(conv_vars) + len(bias_vars):len(conv_vars) + len(bias_vars) + len(last_weights)]
-    	last_bias_gradients = gradients[len(conv_vars) + len(bias_vars) + len(last_weights):len(conv_vars) + len(bias_vars) + len(last_weights) + len(last_bias)]
+    	with tf.name_scope('train'):
+    		gradients = tf.gradients(cross_entropy, conv_vars + bias_vars + last_weights + last_bias)
+    		conv_vars_gradients = gradients[:len(conv_vars)]
+    		bias_vars_gradients = gradients[len(conv_vars):len(conv_vars) + len(bias_vars)]
+    		last_weights_gradients = gradients[len(conv_vars) + len(bias_vars):len(conv_vars) + len(bias_vars) + len(last_weights)]
+    		last_bias_gradients = gradients[len(conv_vars) + len(bias_vars) + len(last_weights):len(conv_vars) + len(bias_vars) + len(last_weights) + len(last_bias)]
     
 	trained_weights_optimizer = tf.train.GradientDescentOptimizer(base_lr)
 	trained_biases_optimizer = tf.train.GradientDescentOptimizer(2*base_lr)
