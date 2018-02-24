@@ -16,6 +16,9 @@ You will need three files:
 * [The Image Labels](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/imagelabels.mat)
 * [The data splits](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/setid.mat)
 
+You will also need AlexNet pretrained weights:
+* [Download from here](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)
+
 *Please download the three required files and put them inside the `AlexNet` folder if you want to train using the `.py` file.*
 
 #### Start training
