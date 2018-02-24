@@ -36,3 +36,6 @@ To start training, run `python flower_test.py`
 * cv2
 * scipy
 * tensorflow
+
+## Explaination
+* Full code description is available inside the `Oxford_102_AlexNet.ipynb` file.
